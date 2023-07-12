@@ -1,7 +1,6 @@
 ---
 export interface Navigation {
   label: string;
-  href: string;
 }
 ---
 
@@ -13,9 +12,13 @@ export interface Navigation {
     </svg>
   </label>
   <ul class="navList bg-white py-4 px-2 absolute top-10 left-0 w-full mt-10 transform scale-0 origin-top transition-transform duration-300 ease-in-out" x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-    <li><a href="/" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Home</a></li>
-    <li><a href="/products" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Products</a></li>
-    <li><a href="/tos" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Terms of Service</a></li>
+    <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Item Returns</a></li>
+    <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Cancellations</a></li>
+    <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Damaged / Quality Issues</a></li>
+    <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Refund Policy</a></li>
+    <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Terms of Service</a></li>
+    <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Privacy Policy</a></li>
+
   </ul>
 </nav>
 
