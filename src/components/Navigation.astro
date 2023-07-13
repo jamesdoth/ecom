@@ -4,7 +4,7 @@ export interface Navigation {
 }
 ---
 
-<nav>
+<nav class="navbar">
   <input type="checkbox" id="toggle" class="toggle-checkbox absolute opacity-0 w-0 h-0">
   <label for="toggle" class="toggle-label relative z-10 flex items-center cursor-pointer p-2">
     <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -18,9 +18,26 @@ export interface Navigation {
     <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Refund Policy</a></li>
     <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Terms of Service</a></li>
     <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Privacy Policy</a></li>
-
   </ul>
 </nav>
+
+<script>
+  const navbar = document.querySelector('.navbar');
+  const togglecheckbox = document.querySelector('.toggle-checkbox') as HTMLInputElement;
+
+  document.addEventListener('click', function(event: Event) {
+    const target = event.target as HTMLElement;
+    if (togglecheckbox && !navbar?.contains(target)) {
+      togglecheckbox.checked = false;
+    }
+  });
+
+  if (togglecheckbox) {
+    togglecheckbox.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+  };
+</script>
 
 <style>
   .toggle-checkbox:checked ~ .navList {
